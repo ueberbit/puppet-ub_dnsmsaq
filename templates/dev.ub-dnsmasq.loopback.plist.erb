@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>dev.ub-dnsmasq.loopback</string>
+
+    <key>Boxen</key>
+    <dict>
+      <key>Description</key>
+      <string>Binds additional ip to OS X loopback device (lo0).</string>
+    </dict>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string><%= scope.lookupvar "ub-dnsmasq::executable" %></string>
+      <string><%= scope.lookupvar "ub-dnsmasq::ip" %></string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true />
+
+    <key>KeepAlive</key>
+    <true />
+  </dict>
+</plist>
