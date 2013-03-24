@@ -1,9 +1,9 @@
 class ub-dnsmasq {
-  $ip = '192.168.33.2'
+  $ip = '192.168.33.1'
   $executable = '/opt/boxen/repo/shared/ub-dnsmasq/files/loopback.sh'
 
   class { 'dnsmasq::config':
-    address => $ip,
+    configfile_source => 'puppet:///modules/ub-dnsmasq/dnsmasq.conf'
   }
 
   class { 'dnsmasq':
