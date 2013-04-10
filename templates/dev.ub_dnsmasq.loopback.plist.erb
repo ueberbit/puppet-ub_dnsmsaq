@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>dev.ub-dnsmasq.loopback</string>
+    <string>dev.ub_dnsmasq.loopback</string>
 
     <key>Boxen</key>
     <dict>
@@ -13,8 +13,8 @@
 
     <key>ProgramArguments</key>
     <array>
-      <string><%= scope.lookupvar "ub-dnsmasq::executable" %></string>
-      <string><%= scope.lookupvar "ub-dnsmasq::ip" %></string>
+      <string><%= scope.lookupvar "ub_dnsmasq::executable" %></string>
+      <string><%= scope.lookupvar "ub_dnsmasq::ip" %></string>
     </array>
 
     <key>RunAtLoad</key>
